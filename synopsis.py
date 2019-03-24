@@ -1,93 +1,5 @@
 #!/usr/bin/env python
 
-'''
-1. перебор элементов.
-2. перебор элементов в обратном порядке.
-3. перебор элементов с их номерами.
-4. создание списка кортежей симметричных элементов из двух списков.
-5. список кортежей, полученных с помощью zip, можно преобразовать в словарь.
-6. сортировка по ключу; ключом может быть любая функция, которую можно применить
-   к элементу списка. Вернет новый список.
-7. сортировка с помощью метода списка (на месте).
-8. сортировка с помощью функции (вернет новый).
-9. сортировка с помощью itemgetter - это не медленная python функция, а нативная С-шная.
-   работает быстрей.
-10. удаление элемента из словаря во время прохода по нему.
-11. подсчет одинаковых элементов в списке.
-    метод get позволяет вернуть значение по-умолчанию, если нет в словаре.
-12. подсчет одинаковых элементов в списке.
-    метод setdefault установит, если надо значение по-умолчанию.
-13. подсчет одинаковых элементов в списке.
-    defaultdict сам устанавливает значение по-умолчанию, если отсутсвует.
-14. группировка элементов по заданному атрибуту.
-15. создание словаря.
-16. вернуть список ключ-значение.
-17. правильный способ узнать, есть ли ключ в словаре.
-18. возвращает новый подкласс кортежа с именованными полями.
-    может удобно использоваться как структура в c/c++.
-    вывести сигнатуру получившегося класса.
-19. считать csv.
-20. получить имя файла и расширение правильным путем (os.path).
-21. конкатенация элементов пути в фс правильным путем.
-22. возможности оператора for ... in ... else. квадраты четных чисел.
-23. пример генератора. сохраняет память. сумма квадратов.
-24. объявление класса с property. 1 способ.
-25. объявление класса с property. 2 способ. более явный.
-26. обмен значениями между двумя переменными с помощью распаковки.
-    в данном случае будет создан кортеж.
-27. join более эффективная операция для конкатенации строк, чем +/+=.
-    судя по всему, из-за перераспределении памяти при +/+=.
-28. функция len вызывает метод __len__, определенный в классе.
-29. приведение типа к bool осуществляется благодаря __bool__.
-    __nonzero__ - deprecated.
-30. выдает все определенные локальные переменные модуля (текущий словарь).
-31. печатает в удобном виде объекты python.
-32. проверка, принадлежит ли объект данному классу.
-33. При ошибке в работе с типами кидается TypeError.
-34. подобный сишному тернарный оператор.
-35. операция скобочки реализуется с помощью __getitem__.
-    с помощью Ellipsis можно узнать если передали в скобочках '...'.
-36. python использует замыкание. запоминает значение локальных переменных. adder.
-37. встроенное средство проверки на вхождение в интервал.
-38. средство для выравнивания строк по заданному количеству символов.
-39. применяется для свертывания списка с помощью выбранной функции. reduce.
-40. получение копии списка или частей списка с помощью среза.
-41. удаление части списка.
-42. вставка в начало списка.
-43. метод __new__ создает сам объект.
-    метод __init__ его инициализирует.
-    объект, созданный в __new__, затем передается методу __init__ (self).
-44. реализация singleton с помощью метода __new__.
-45. Другой тип singleton'а.
-    В данном случае объявляется метакласс.
-    При объявлении пользовательского класса, при указании на метакласс,
-    он будет использоваться для порождения новых объектов нового класса.
-    В итоге, в каждом новом классе, при его объявлении, будет
-    немедленно создан объект instance - для каждого свой.
-46. создание класса.
-47. создание класса А с помощью метакласса type, а также B, наследник от A.
-48. определение метакласса.
-49. определение метакласса и создание других классов с его помощью.
-50. type, object
-51. создание метакласса и класса от него в кратком и развернутом виде (type и super).
-52. Movable & Car & abc module.
-53. читаем порциями из файла.
-54. показать файлы в директории.
-55. пройти файлы и папки.
-56. развернуть относительный путь.
-57. использовать маску для файлов.
-58. общий размер перечисленных файлов.
-59. пример генератора с посылкой в него значений - калькулятор.
-60. что такое дескриптор?
-61. что такое property?
-62. staticmethod & classmethod.
-63. __slots__.
-64. реализация статического метода staticmethod дескриптора.
-65. контекстный менеджер - класс.
-66. контекстный менеджер - функция.
-67. takewhile, dropwhile, iter.
-'''
-
 # перебор элементов.
 colors = ['red', 'green', 'blue', 'yellow']
 for color in colors:
@@ -134,6 +46,7 @@ print(L)
 # сортировка с помощью функции (вернет новый).
 L = [1, 2, 6, 1, 7, 9, 2, 6]
 sorted(L, key = lambda x: int(x))
+
 
 # сортировка
 # itemgetter - это не медленная python функция, а нативная С-шная.
@@ -368,7 +281,7 @@ if my_container:
     print('my_container is non zero')
 
 
-# выдает все определенные локальные переменные модуля (текущий словарь).
+# выдает все определенные локальные переменные модуля или функции (текущий словарь).
 locals()
 
 
@@ -384,8 +297,8 @@ print(isinstance('asd', str))
 # При ошибке в работе с типами кидается TypeError.
 try:
     print(str(MyContainer()))
-except TypeError:
-    print("print(str(x)) type error!")
+except TypeError as e:
+    print("print(str(x)) type error: " + str(e))
 
 
 # встроенный счетчик для итерируемого объекта.
@@ -454,7 +367,7 @@ print(textwrap.fill(s, 60))
 # применяется для свертывания списка с помощью выбранной функции.
 from functools import *
 lst = [1, 2, 3, 4, 5]
-print(reduce(lambda x, y: x * y, lst))
+print(reduce(lambda x, y: x * y, lst, 2))
 
 
 # получение копии списка или частей списка с помощью среза.
@@ -624,15 +537,15 @@ print(b.foo())
 
 
 # определение метакласса.
-class A(type):
-    def say(self):
-        print('SAY SAY SAY')
-
-
 # Это равносильно:
 # A = type('A', (type,), {})
 # A стал метаклассом, предназначенным для создания других классов.
 # Производные классы, также будут наследовать и его __dict__ (say).
+# self - not an instance of class, but class object itself.
+class A(type):
+    def say(self):
+        print('SAY SAY SAY')
+
 BB = A('BB', (object,), {})
 BB.say()
 
@@ -649,13 +562,13 @@ assert isinstance(A, object)
 assert isinstance(A, type)
 
 assert not isinstance(int(1), type)
+assert isinstance(int, type)
 assert isinstance(int(1), object)
 assert isinstance(int(1), int)
-assert isinstance(int, type)
 
 assert issubclass(type, object)
-assert issubclass(A, type)
 assert not issubclass(object, type)
+assert issubclass(A, type)
 assert not issubclass(BB, type)
 
 
@@ -747,7 +660,7 @@ del car.speed
 # читаем порциями из файла.
 from functools import partial
 RECORD_SIZE = 32
-with open('best_practices.py', 'rb') as f:
+with open('synopsis.py', 'rb') as f:
     records = iter(partial(f.read, RECORD_SIZE), b'')
     for record in records:
         pass
@@ -774,7 +687,7 @@ print(m.closed)
 # zip file.
 import zipfile
 file = zipfile.ZipFile("archive.zip", "w", zipfile.ZIP_DEFLATED)
-file.write("best_practices.py")
+file.write("synopsis.py")
 file.close()
 
 # unzip file.
@@ -804,7 +717,7 @@ for filename in glob.glob(r"*.*"):
 
 # get total file sizes
 from operator import add
-files = ["/etc/group", "/etc/passwd", "best_practices.py"]
+files = ["/etc/group", "/etc/passwd", "synopsis.py"]
 print(reduce(add, map(os.path.getsize,
                       filter(lambda x: x.endswith(".py"), files)), 0))
 
@@ -816,9 +729,9 @@ print(reduce(add, map(os.path.getsize,
 # Может вернуть результат по завершению.
 # Не подходит для задач, которые производят долгие расчеты.
 # Подходит для I/O: сетевой сервер, пользовательский интерфейс и т.д.
-
+from functools import wraps
 def coroutine(f):
-
+    @wraps(f)
     def wrap(*args, **kwargs):
         gen = f(*args, **kwargs)
         gen.send(None) # initialize generator
@@ -992,7 +905,7 @@ class StaticMethod(object):
         self.f = f
 
     def __get__(self, obj, klass=None):
-        return self.f
+        return self.f(obj)
 
 # Реализация с помощью протокола дескриптора не данных classmethod.
 class ClassMethod(object):
@@ -1097,6 +1010,7 @@ testIt = iter([1, 2, 3, 4, 5])
 print([x for x in testIt])
 
 def getSimple(state=[]):
+    print(state.__sizeof__())
     if len(state) < 4:
         state.append(' ')
         return ' '
@@ -1193,3 +1107,15 @@ def memoized(fn):
 import os
 os.remove('archive.zip')
 os.remove('data')
+
+
+
+
+# it is are hits only for type checkers
+from typing import List
+
+def greeting(names: List[str]) -> str:
+    return "";
+    # return 'Hello, {}'.format(', '.join(names))
+
+greeting(['jane', 'john', 'judy'])
