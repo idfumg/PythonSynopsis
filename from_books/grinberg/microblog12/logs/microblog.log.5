@@ -1,0 +1,91 @@
+{'name': 'app', 'msg': 'Exception on /reset_password_request [POST]', 'args': (), 'levelname': 'ERROR', 'levelno': 40, 'pathname': '/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py', 'filename': 'app.py', 'module': 'app', 'exc_info': (<class 'jinja2.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("expected token 'end of print statement', got '='"), <traceback object at 0x7fb366265d70>), 'exc_text': 'Traceback (most recent call last):\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app\n    response = self.full_dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise\n    raise value\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request\n    rv = self.dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File "/home/idfumg/1/python/grinberg/microblog10/app/routes.py", line 183, in reset_password_request\n    send_password_reset_email(user)\n  File "/home/idfumg/1/python/grinberg/microblog10/app/email.py", line 17, in send_password_reset_email\n    html_body=render_template(\'email/reset_password.html\', user=user, token=token))\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template\n    ctx.app.jinja_env.get_or_select_template(template_name_or_list),\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template\n    return self.get_template(template_name_or_list, parent, globals)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template\n    return self._load_template(name, self.make_globals(globals))\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template\n    template = self.loader.load(self, name, globals)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load\n    code = environment.compile(source, name, filename)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile\n    self.handle_exception(exc_info, source_hint=source_hint)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise\n    raise value.with_traceback(tb)\n  File "/home/idfumg/1/python/grinberg/microblog10/app/templates/email/reset_password.html", line 5, in template\n    <a href="{{ url_for(\'reset_password\'), token=token, _external=True) }}">click here</a>.\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse\n    return Parser(self, source, name, encode_filename(filename)).parse()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse\n    result = nodes.Template(self.subparse(), lineno=1)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 876, in subparse\n    self.stream.expect(\'variable_end\')\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/lexer.py", line 384, in expect\n    self.name, self.filename)\njinja2.exceptions.TemplateSyntaxError: expected token \'end of print statement\', got \'=\'', 'stack_info': None, 'lineno': 1891, 'funcName': 'log_exception', 'created': 1570525786.2838154, 'msecs': 283.8153839111328, 'relativeCreated': 7202.201843261719, 'thread': 140408500451072, 'threadName': 'Thread-1', 'processName': 'MainProcess', 'process': 29573, 'message': 'Exception on /reset_password_request [POST]', 'asctime': '2019-10-08 12:09:46,283'}sctime)s ERROR: Exception on /reset_password_request [POST] [in /home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py: 1891]
+Traceback (most recent call last):
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/idfumg/1/python/grinberg/microblog10/app/routes.py", line 183, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/idfumg/1/python/grinberg/microblog10/app/email.py", line 17, in send_password_reset_email
+    html_body=render_template('email/reset_password.html', user=user, token=token))
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/idfumg/1/python/grinberg/microblog10/app/templates/email/reset_password.html", line 5, in template
+    <a href="{{ url_for('reset_password'), token=token, _external=True) }}">click here</a>.
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+{'name': 'app', 'msg': 'Exception on /reset_password_request [POST]', 'args': (), 'levelname': 'ERROR', 'levelno': 40, 'pathname': '/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py', 'filename': 'app.py', 'module': 'app', 'exc_info': (<class 'jinja2.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("expected token 'end of print statement', got '='"), <traceback object at 0x7fb3661bfe10>), 'exc_text': 'Traceback (most recent call last):\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app\n    response = self.full_dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise\n    raise value\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request\n    rv = self.dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File "/home/idfumg/1/python/grinberg/microblog10/app/routes.py", line 183, in reset_password_request\n    send_password_reset_email(user)\n  File "/home/idfumg/1/python/grinberg/microblog10/app/email.py", line 17, in send_password_reset_email\n    html_body=render_template(\'email/reset_password.html\', user=user, token=token))\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template\n    ctx.app.jinja_env.get_or_select_template(template_name_or_list),\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template\n    return self.get_template(template_name_or_list, parent, globals)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template\n    return self._load_template(name, self.make_globals(globals))\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template\n    template = self.loader.load(self, name, globals)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load\n    code = environment.compile(source, name, filename)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile\n    self.handle_exception(exc_info, source_hint=source_hint)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise\n    raise value.with_traceback(tb)\n  File "/home/idfumg/1/python/grinberg/microblog10/app/templates/email/reset_password.html", line 5, in template\n    <a href="{{ url_for(\'reset_password\'), token=token, _external=True) }}">click here</a>.\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse\n    return Parser(self, source, name, encode_filename(filename)).parse()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse\n    result = nodes.Template(self.subparse(), lineno=1)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 876, in subparse\n    self.stream.expect(\'variable_end\')\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/lexer.py", line 384, in expect\n    self.name, self.filename)\njinja2.exceptions.TemplateSyntaxError: expected token \'end of print statement\', got \'=\'', 'stack_info': None, 'lineno': 1891, 'funcName': 'log_exception', 'created': 1570525882.1304843, 'msecs': 130.48434257507324, 'relativeCreated': 103048.87080192566, 'thread': 140408500451072, 'threadName': 'Thread-5', 'processName': 'MainProcess', 'process': 29573, 'message': 'Exception on /reset_password_request [POST]', 'asctime': '2019-10-08 12:11:22,130'}sctime)s ERROR: Exception on /reset_password_request [POST] [in /home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py: 1891]
+Traceback (most recent call last):
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/idfumg/1/python/grinberg/microblog10/app/routes.py", line 183, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/idfumg/1/python/grinberg/microblog10/app/email.py", line 17, in send_password_reset_email
+    html_body=render_template('email/reset_password.html', user=user, token=token))
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/idfumg/1/python/grinberg/microblog10/app/templates/email/reset_password.html", line 5, in template
+    <a href="{{ url_for('reset_password'), token=token, _external=True) }}">click here</a>.
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+{'name': 'app', 'msg': 'Microblog startup', 'args': (), 'levelname': 'INFO', 'levelno': 20, 'pathname': '/home/idfumg/1/python/grinberg/microblog10/app/__init__.py', 'filename': '__init__.py', 'module': '__init__', 'exc_info': None, 'exc_text': None, 'stack_info': None, 'lineno': 52, 'funcName': '<module>', 'created': 1570525932.7700074, 'msecs': 770.0073719024658, 'relativeCreated': 243.42656135559082, 'thread': 140181489133184, 'threadName': 'MainThread', 'processName': 'MainProcess', 'process': 29681, 'message': 'Microblog startup', 'asctime': '2019-10-08 12:12:12,770'}sctime)s INFO: Microblog startup [in /home/idfumg/1/python/grinberg/microblog10/app/__init__.py: 52]

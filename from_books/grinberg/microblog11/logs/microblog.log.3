@@ -1,0 +1,67 @@
+{'name': 'app', 'msg': 'Exception on /index [GET]', 'args': (), 'levelname': 'ERROR', 'levelno': 40, 'pathname': '/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py', 'filename': 'app.py', 'module': 'app', 'exc_info': (<class 'jinja2.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'."), <traceback object at 0x7fcc4aaeae10>), 'exc_text': 'Traceback (most recent call last):\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app\n    response = self.full_dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise\n    raise value\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request\n    rv = self.dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view\n    return func(*args, **kwargs)\n  File "/home/idfumg/1/python/grinberg/microblog11/app/routes.py", line 50, in index\n    prev_url=prev_url)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template\n    ctx.app.jinja_env.get_or_select_template(template_name_or_list),\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template\n    return self.get_template(template_name_or_list, parent, globals)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template\n    return self._load_template(name, self.make_globals(globals))\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template\n    template = self.loader.load(self, name, globals)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load\n    code = environment.compile(source, name, filename)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile\n    self.handle_exception(exc_info, source_hint=source_hint)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise\n    raise value.with_traceback(tb)\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 26, in template\n    {% endblock %}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse\n    return Parser(self, source, name, encode_filename(filename)).parse()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse\n    result = nodes.Template(self.subparse(), lineno=1)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse\n    rv = self.parse_statement()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 130, in parse_statement\n    return getattr(self, \'parse_\' + self.stream.current.value)()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 268, in parse_block\n    node.body = self.parse_statements((\'name:endblock\',), drop_needle=True)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 165, in parse_statements\n    result = self.subparse(end_tokens)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse\n    rv = self.parse_statement()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 130, in parse_statement\n    return getattr(self, \'parse_\' + self.stream.current.value)()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 212, in parse_if\n    node.body = self.parse_statements((\'name:elif\', \'name:else\',\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 165, in parse_statements\n    result = self.subparse(end_tokens)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse\n    rv = self.parse_statement()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 144, in parse_statement\n    self.fail_unknown_tag(token.value, token.lineno)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 97, in fail_unknown_tag\n    return self._fail_ut_eof(name, self._end_token_stack, lineno)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 90, in _fail_ut_eof\n    self.fail(\' \'.join(message), lineno)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 59, in fail\n    raise exc(msg, lineno, self.name, self.filename)\njinja2.exceptions.TemplateSyntaxError: Encountered unknown tag \'endblock\'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for \'elif\' or \'else\' or \'endif\'. The innermost block that needs to be closed is \'if\'.', 'stack_info': None, 'lineno': 1891, 'funcName': 'log_exception', 'created': 1570527492.0111127, 'msecs': 11.112689971923828, 'relativeCreated': 5878.8769245147705, 'thread': 140515414025984, 'threadName': 'Thread-1', 'processName': 'MainProcess', 'process': 30271, 'message': 'Exception on /index [GET]', 'asctime': '2019-10-08 12:38:12,011'}sctime)s ERROR: Exception on /index [GET] [in /home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py: 1891]
+Traceback (most recent call last):
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/idfumg/1/python/grinberg/microblog11/app/routes.py", line 50, in index
+    prev_url=prev_url)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 26, in template
+    {% endblock %}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 212, in parse_if
+    node.body = self.parse_statements(('name:elif', 'name:else',
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 144, in parse_statement
+    self.fail_unknown_tag(token.value, token.lineno)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 97, in fail_unknown_tag
+    return self._fail_ut_eof(name, self._end_token_stack, lineno)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 90, in _fail_ut_eof
+    self.fail(' '.join(message), lineno)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/parser.py", line 59, in fail
+    raise exc(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.

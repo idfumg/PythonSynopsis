@@ -1,0 +1,100 @@
+{'name': 'app', 'msg': 'Exception on /index [GET]', 'args': (), 'levelname': 'ERROR', 'levelno': 40, 'pathname': '/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py', 'filename': 'app.py', 'module': 'app', 'exc_info': (<class 'jinja2.exceptions.UndefinedError'>, UndefinedError("'wtf' is undefined"), <traceback object at 0x7fd6b0df31e0>), 'exc_text': 'Traceback (most recent call last):\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app\n    response = self.full_dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise\n    raise value\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request\n    rv = self.dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view\n    return func(*args, **kwargs)\n  File "/home/idfumg/1/python/grinberg/microblog11/app/routes.py", line 50, in index\n    prev_url=prev_url)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template\n    ctx.app,\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render\n    rv = template.render(context)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render\n    return original_render(self, *args, **kwargs)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render\n    return self.environment.handle_exception(exc_info, True)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise\n    raise value.with_traceback(tb)\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 1, in top-level template code\n    {% extends "base.html" %}\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 1, in top-level template code\n    {% extends \'bootstrap/base.html\' %}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code\n    {% block doc -%}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"\n    {%- block html %}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"\n    {% block body -%}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"\n    {% block content -%}\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 36, in block "content"\n    {% block app_content %}\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 10, in block "app_content"\n    {{ wtf.quick_form(form) }}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr\n    return getattr(obj, attribute)\njinja2.exceptions.UndefinedError: \'wtf\' is undefined', 'stack_info': None, 'lineno': 1891, 'funcName': 'log_exception', 'created': 1570527643.1499486, 'msecs': 149.9485969543457, 'relativeCreated': 2528.575658798218, 'thread': 140560078046976, 'threadName': 'Thread-1', 'processName': 'MainProcess', 'process': 30333, 'message': 'Exception on /index [GET]', 'asctime': '2019-10-08 12:40:43,149'}sctime)s ERROR: Exception on /index [GET] [in /home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py: 1891]
+Traceback (most recent call last):
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/idfumg/1/python/grinberg/microblog11/app/routes.py", line 50, in index
+    prev_url=prev_url)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 36, in block "content"
+    {% block app_content %}
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 10, in block "app_content"
+    {{ wtf.quick_form(form) }}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'wtf' is undefined
+{'name': 'app', 'msg': 'Microblog startup', 'args': (), 'levelname': 'INFO', 'levelno': 20, 'pathname': '/home/idfumg/1/python/grinberg/microblog11/app/__init__.py', 'filename': '__init__.py', 'module': '__init__', 'exc_info': None, 'exc_text': None, 'stack_info': None, 'lineno': 54, 'funcName': '<module>', 'created': 1570527702.7123108, 'msecs': 712.310791015625, 'relativeCreated': 325.79779624938965, 'thread': 139758819063424, 'threadName': 'MainThread', 'processName': 'MainProcess', 'process': 30358, 'message': 'Microblog startup', 'asctime': '2019-10-08 12:41:42,712'}sctime)s INFO: Microblog startup [in /home/idfumg/1/python/grinberg/microblog11/app/__init__.py: 54]
+{'name': 'app', 'msg': 'Microblog startup', 'args': (), 'levelname': 'INFO', 'levelno': 20, 'pathname': '/home/idfumg/1/python/grinberg/microblog11/app/__init__.py', 'filename': '__init__.py', 'module': '__init__', 'exc_info': None, 'exc_text': None, 'stack_info': None, 'lineno': 54, 'funcName': '<module>', 'created': 1570527934.9720876, 'msecs': 972.0876216888428, 'relativeCreated': 251.96218490600586, 'thread': 140668401911424, 'threadName': 'MainThread', 'processName': 'MainProcess', 'process': 30447, 'message': 'Microblog startup', 'asctime': '2019-10-08 12:45:34,972'}sctime)s INFO: Microblog startup [in /home/idfumg/1/python/grinberg/microblog11/app/__init__.py: 54]
+{'name': 'app', 'msg': 'Microblog startup', 'args': (), 'levelname': 'INFO', 'levelno': 20, 'pathname': '/home/idfumg/1/python/grinberg/microblog11/app/__init__.py', 'filename': '__init__.py', 'module': '__init__', 'exc_info': None, 'exc_text': None, 'stack_info': None, 'lineno': 54, 'funcName': '<module>', 'created': 1570527966.645013, 'msecs': 645.0130939483643, 'relativeCreated': 249.3305206298828, 'thread': 140081406195328, 'threadName': 'MainThread', 'processName': 'MainProcess', 'process': 30467, 'message': 'Microblog startup', 'asctime': '2019-10-08 12:46:06,645'}sctime)s INFO: Microblog startup [in /home/idfumg/1/python/grinberg/microblog11/app/__init__.py: 54]
+{'name': 'app', 'msg': 'Microblog startup', 'args': (), 'levelname': 'INFO', 'levelno': 20, 'pathname': '/home/idfumg/1/python/grinberg/microblog11/app/__init__.py', 'filename': '__init__.py', 'module': '__init__', 'exc_info': None, 'exc_text': None, 'stack_info': None, 'lineno': 54, 'funcName': '<module>', 'created': 1570528162.2346296, 'msecs': 234.62963104248047, 'relativeCreated': 280.21764755249023, 'thread': 140056890832512, 'threadName': 'MainThread', 'processName': 'MainProcess', 'process': 30553, 'message': 'Microblog startup', 'asctime': '2019-10-08 12:49:22,234'}sctime)s INFO: Microblog startup [in /home/idfumg/1/python/grinberg/microblog11/app/__init__.py: 54]
+{'name': 'app', 'msg': 'Exception on /index [GET]', 'args': (), 'levelname': 'ERROR', 'levelno': 40, 'pathname': '/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py', 'filename': 'app.py', 'module': 'app', 'exc_info': (<class 'jinja2.exceptions.UndefinedError'>, UndefinedError("'_' is undefined"), <traceback object at 0x7f61860a7960>), 'exc_text': 'Traceback (most recent call last):\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app\n    response = self.full_dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise\n    raise value\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request\n    rv = self.dispatch_request()\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request\n    return self.view_functions[rule.endpoint](**req.view_args)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view\n    return func(*args, **kwargs)\n  File "/home/idfumg/1/python/grinberg/microblog11/app/routes.py", line 50, in index\n    prev_url=prev_url)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template\n    ctx.app,\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render\n    rv = template.render(context)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render\n    return original_render(self, *args, **kwargs)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render\n    return self.environment.handle_exception(exc_info, True)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception\n    reraise(exc_type, exc_value, tb)\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise\n    raise value.with_traceback(tb)\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 2, in top-level template code\n    {% import \'bootstrap/wtf.html\' as wtf %}\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 1, in top-level template code\n    {% extends \'bootstrap/base.html\' %}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code\n    {% block doc -%}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"\n    {%- block html %}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"\n    {% block body -%}\n  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"\n    {% block content -%}\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 36, in block "content"\n    {% block app_content %}\n  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 24, in block "app_content"\n    <span aria-hidden="true">&larr;</span> {{ _(\'Newer posts\') }}\njinja2.exceptions.UndefinedError: \'_\' is undefined', 'stack_info': None, 'lineno': 1891, 'funcName': 'log_exception', 'created': 1570528163.3814692, 'msecs': 381.4692497253418, 'relativeCreated': 1427.0572662353516, 'thread': 140056848721664, 'threadName': 'Thread-1', 'processName': 'MainProcess', 'process': 30553, 'message': 'Exception on /index [GET]', 'asctime': '2019-10-08 12:49:23,381'}sctime)s ERROR: Exception on /index [GET] [in /home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py: 1891]
+Traceback (most recent call last):
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/idfumg/1/python/grinberg/microblog11/app/routes.py", line 50, in index
+    prev_url=prev_url)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/idfumg/1/python/grinberg/microblog1/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/base.html", line 36, in block "content"
+    {% block app_content %}
+  File "/home/idfumg/1/python/grinberg/microblog11/app/templates/index.html", line 24, in block "app_content"
+    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+jinja2.exceptions.UndefinedError: '_' is undefined
